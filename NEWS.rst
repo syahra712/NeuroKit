@@ -20,6 +20,8 @@ New Features
 Fixes
 +++++++++++++
 
+* ``hrv_rsa()``: ``RSA_PorgesBohrer`` is now computed on heart period (ms) instead of heart
+  rate (bpm), so it is in ln(ms^2) as documented and no longer comes out negative.
 * ``ecg_process()``, ``ecg_delineate()``, ``ecg_phase()`` and ``ecg_quality()`` no longer
   crash when no R-peak is detected; they return NaN/empty outputs with a warning.
 * ``read_acqknowledge()`` returns the sampling rate as an ``int`` (previously a NumPy float,
